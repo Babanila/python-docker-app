@@ -18,8 +18,8 @@ def hello_People():
 def say_hello():
     return jsonify({"msg": "Hello from Flask"})
 
-@app.route('/storage', methods=['GET', 'POST'])
-def mainpage():
+@app.route('/app', methods=['GET', 'POST'])
+def apppage():
 
 	key = default_key
 	if 'key' in request.form:

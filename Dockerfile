@@ -1,8 +1,8 @@
 FROM python:3.9-slim-buster
 
-WORKDIR /python-docker-sample
+WORKDIR /app
 
-COPY ./requirements.txt /python-docker-sample
+COPY ./requirements.txt /app
 
 RUN pip install -r requirements.txt
 

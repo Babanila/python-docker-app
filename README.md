@@ -25,7 +25,7 @@ git clone git@github.com:babanila/python-docker-sample.git
 
     - docker build -t babanila/python-docker-sample .
 
-    - docker run -p 5000:5000 babanila/python-docker-sample:v1.0.0
+    - docker run -p 5000:5000 babanila/python-docker-sample
 
 ## Build and run docker image with specific version
 
@@ -44,6 +44,10 @@ git clone git@github.com:babanila/python-docker-sample.git
 2. <http://127.0.0.1:5000/2>
 
 3. <http://127.0.0.1:5000/hello>
+
+4. <http://127.0.0.1:5000/app>
+
+# Running with Redis implemenation
 
 ## Linking Two Containers (our App and Redis Storage)
 
