@@ -44,3 +44,15 @@ git clone git@github.com:babanila/python-docker-sample.git
 2. <http://127.0.0.1:5000/2>
 
 3. <http://127.0.0.1:5000/hello>
+
+## Linking Two Containers (our App and Redis Storage)
+
+1. Create and run redis container
+   - docker run -d --name redis redis:7.0.7-alpine
+
+2. Run app container and link redis container
+   - docker run -d -p 5000:5000 --link redis babanila/python-docker-sample:v3.0.0
+
+3. Check the IP on app container
+   - docker exec -it 8a9726448161 bash
+   - more /etc/hosts
