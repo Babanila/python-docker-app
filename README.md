@@ -55,8 +55,14 @@ git clone git@github.com:babanila/python-docker-sample.git
    - docker run -d --name redis redis:7.0.7-alpine
 
 2. Run app container and link redis container
+   - docker build -t babanila/python-docker-sample:v3.0.0 .
    - docker run -d -p 5000:5000 --link redis babanila/python-docker-sample:v3.0.0
 
 3. Check the IP on app container
-   - docker exec -it 8a9726448161 bash
+   - docker exec -it containerID bash
    - more /etc/hosts
+
+# Running with docker-compose implemenation
+
+1. docker-compose build
+2. docker-compose up or docker-compose start
